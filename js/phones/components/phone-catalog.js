@@ -1,6 +1,6 @@
 // import Component from '/js/component.js';
 
-export default class PhoneCatalog extends  Component {
+export default class PhoneCatalog  {
   constructor({ 
     element, 
     phones = [], 

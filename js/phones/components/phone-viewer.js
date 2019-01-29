@@ -1,6 +1,6 @@
 // import Component from '/js/component.js';
 
-export default class PhoneViewer extends  Component {
+export default class PhoneViewer {
   constructor({ element }) {
     this._element = element;
   }
