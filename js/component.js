@@ -1,7 +1,6 @@
 export default class Component {
   constructor({ element }) {
     this._element = element;
-
   }
 
   hide() {
@@ -11,4 +10,4 @@ export default class Component {
   show() {
     this._element.hidden = false;
   }
-};
+}

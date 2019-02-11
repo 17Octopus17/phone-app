@@ -1,10 +1,10 @@
 // import Component from '/js/component.js';
 
-export default class PhoneCatalog  {
-  constructor({ 
-    element, 
-    phones = [], 
-    onPhoneSelected = () => {} 
+export default class PhoneCatalog {
+  constructor({
+    element,
+    phones = [],
+    onPhoneSelected = () => {},
   }) {
     this._element = element;
     this._phones = phones;
@@ -12,13 +12,13 @@ export default class PhoneCatalog  {
 
     this._render();
     this._element.addEventListener('click', (event) => {
-      let phoneElement = event.target.closest('[data-element="phone"]');
+      const phoneElement = event.target.closest('[data-element="phone"]');
 
-      if(!phoneElement) {
+      if (!phoneElement) {
         return;
       }
 
-    this._onPhoneSelected(phoneElement.dataset.phoneId);
+      this._onPhoneSelected(phoneElement.dataset.phoneId);
     });
   }
 
@@ -29,7 +29,7 @@ export default class PhoneCatalog  {
   _render() {
     this._element.innerHTML = `
     <ul class="phones">
-    ${ this._phones.map(phone => `
+    ${this._phones.map(phone => `
 
     <li class="thumbnail" data-element="phone" data-phone-id="${phone.id}">
     <a href="#!/phones/${phone.id}" class="thumb">
@@ -44,7 +44,7 @@ export default class PhoneCatalog  {
 
     <a href="#!/phones/motorola-xoom-with-wi-fi">${phone.name}</a>
     <p>${phone.snippet}</p>
-  </li>`).join('') }
+  </li>`).join('')}
   </ul>
     `;
   }

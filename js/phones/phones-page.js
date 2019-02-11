@@ -8,22 +8,21 @@ export default class PhonesPage {
 
     this._render();
 
-    this._catalog = new PhoneCatalog ({
+    this._catalog = new PhoneCatalog({
       element: document.querySelector('[data-component="phone-catalog"]'),
       phones: PhoneService.getAll(),
 
       onPhoneSelected: (phoneId) => {
         const phoneDetails = PhoneService.getById(phoneId);
-      
+
         this._catalog.hide();
         this._viewer.show(phoneDetails);
       },
     });
 
-    this._viewer = new PhoneViewer ({
-      element: document.querySelector('[data-component="phone-viewer"]')
+    this._viewer = new PhoneViewer({
+      element: document.querySelector('[data-component="phone-viewer"]'),
     });
-
   }
 
   _render() {

@@ -1,0 +1,26 @@
+{
+  "name": "phone-app",
+  "version": "1.0.0",
+  "description": "## [PR](https://github.com/17Octopus17/phone-app/pull/1/files)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/17Octopus17/phone-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/17Octopus17/phone-app/issues"
+  },
+  "homepage": "https://github.com/17Octopus17/phone-app#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "node-static": "^0.7.11"
+  }
+}
